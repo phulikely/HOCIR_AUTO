@@ -106,6 +106,20 @@ class MainPage(BasePage):
         time.sleep(wait_time) 
 
 
+    def show_req_id(self):
+        for request in self.driver.requests:
+            # if request.response:
+            # print(request.url, request.response.status_code, request.response.headers['Content-Type'])
+            print(request.url)
+
+        # l_req = self.driver.requests[-1]
+        # if l_req.response:
+        #     url = l_req.url
+        #     print(url.split('?')[-1])
+        # else:
+        #     print('Get request_id unsuccessfully!')
+
+
     def repair_model(self, file_path, processing_time=20):
         """
         Repair 3D Model
@@ -135,6 +149,7 @@ class MainPage(BasePage):
 
         # time for 3d processing
         # the bigger the object, the more time it takes
+        self.show_req_id()
         time.sleep(processing_time)
 
         # click "Result file(1)" button
@@ -180,6 +195,7 @@ class MainPage(BasePage):
 
         # time for processing
         # the bigger the object, the more time it takes
+        self.show_req_id()
         time.sleep(processing_time)
         
         # click "Result file(1)" button
@@ -1772,6 +1788,7 @@ class MainPage(BasePage):
 
         # time for 3d processing
         # the bigger the object, the more time it takes
+        self.get_req_id()
         time.sleep(processing_time)
 
         # click "Result file(1)" button

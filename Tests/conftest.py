@@ -1,9 +1,7 @@
 import pytest
 from selenium import webdriver
-from Config.config import TestData
-from Pages.BasePage import BasePage
-import time
 from Pages.LoginPage import LoginPage
+from seleniumwire import webdriver
 
 
 """

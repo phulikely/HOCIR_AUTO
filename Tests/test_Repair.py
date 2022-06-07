@@ -21,7 +21,7 @@ class Test_MoldFree(BaseTest):
         self.login_page.do_select_app()
 
         self.main_page = MainPage(self.driver)
-        self.main_page.repair_model(file, processing_time=5)
+        self.main_page.repair_model(file, processing_time=15)
         actual = self.main_page.get_result_text((By.XPATH, TestData.RESULT_TXT))
 
         assert actual != 'No file result'

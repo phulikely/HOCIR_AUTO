@@ -107,6 +107,11 @@ class MainPage(BasePage):
 
 
     def show_req_id(self):
+        # For using FireFox
+        # test = self.driver.execute_script("var performance = window.performance || window.mozPerformance || window.msPerformance || window.webkitPerformance || {}; var network = performance.getEntries() || {}; return network;")        
+        # for item in test:
+        #     print(item)
+        # For using Chrome
         for request in self.driver.requests:
             # if request.response:
             # print(request.url, request.response.status_code, request.response.headers['Content-Type'])

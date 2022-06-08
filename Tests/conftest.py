@@ -10,7 +10,7 @@ Excution before and after each testcase
 
 # @pytest.fixture(params=['chrome'], scope='class')
 @pytest.fixture()
-def init_driver(request):
+def setup(request):
     web_driver = webdriver.Chrome()
     # web_driver.implicitly_wait(10)
     web_driver.maximize_window()
